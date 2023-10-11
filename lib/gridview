@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+void main(){
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(debugShowCheckedModeBanner:false,home:MyGrid(),);
+  }
+}
+class gridview extends StatefulWidget {
+  const gridview({super.key});
+
+  @override
+  State<gridview> createState() => _gridviewState();
+}
+
+class _gridviewState extends State<gridview> {
+  @override
+  Widget build(BuildContext context) {
+    int hi=MediaQuery.of(context).size.height.toInt();
+    int wi=MediaQuery.of(context).size.width.toInt();
+    return const Placeholder();
+  }
+}
+
+
+class MyGrid extends StatelessWidget {
+  const MyGrid({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(appBar: AppBar(),
+        body:Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GridView(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10),
+
+            children: [Container(color: Colors.red,
+              child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"
+            ),),
+            ),
+              Container(color: Colors.grey,
+      child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color: Colors.pink,
+                child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color: Colors.black,
+    child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180" ),),),
+          Container(color: Colors.grey,
+            child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180" ),),),
+          Container(color: Colors.pink,
+    child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color: Colors.blue,
+                child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color: Colors.brown,
+                child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color: Colors.green,
+                child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color: Colors.greenAccent,
+                child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color:Colors.amber,
+                child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+              Container(color: Colors.yellow,
+                child: Image(fit: BoxFit.cover,image: NetworkImage("https://tse2.mm.bing.net/th?id=OIP.MRc-n0PyGT4drkYwFINjIwHaHu&pid=Api&P=0&h=180"),),),
+
+            ],
+          ),
+        )
+    );
+  }
+}
+
